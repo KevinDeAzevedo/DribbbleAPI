@@ -1,0 +1,49 @@
+html,
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	top: 0;
+	font-size: 100%;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 100%;
+	margin: 5%;
+
+}
+
+/* Dribble shots on website */
+
+ #dribbbleShots {
+	display: grid;
+	padding: 0;
+	margin:0;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+#dribbbleShots li {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	margin: 20px;
+}
+
+#dribbbleShots img {
+	width: 100%;
+	border-radius: 15px;
+	transition: 0.5s;
+	animation-timing-function: ease-in-out;	
+}
+
+#dribbbleShots img:hover {
+	box-shadow: 0px 10px 25px 0px #cfcfcf;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=180, Strength=25);
+	border-radius: 15px;
+	scale: 105%;
+	transition: 0.5s;
+	animation-timing-function: ease-in-out;
+}
