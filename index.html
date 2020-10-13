@@ -21,11 +21,17 @@
 				type: 'GET',
 				success: function(data) {  
 					if (data.length > 0) { 
-						$.each(data.reverse(), function(i, val) {
-							             
-							$('#dribbbleShots').prepend(
-								'<li><a target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><img src="'+ val.images.two_x +'"/></a></li>'
+						$.each(data.reverse(), function(i, val) {	
+							if (val.video !== null) {
+									$('#dribbbleShots').prepend(
+										'<li><a target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><video loop autoplay src="'+ val.video.large_preview_url +'" type="video/mp4"></a></li>'
 								)
+							}
+							else {
+									$('#dribbbleShots').prepend(
+										'<li><a target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><img src="'+ val.images.two_x +'"/></a></li>'
+								)
+							}
 						})
 					}
 					else {
