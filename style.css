@@ -19,14 +19,26 @@ li {
 
 }
 
-/* Dribble shots on website */
-
 #dribbbleShots {
 	display: grid;
 	padding: 0;
 	margin:0;
 	grid-template-rows: 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 900px) {
+	#dribbbleShots {
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#dribbbleShots {
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr;
+	}
 }
 
 #dribbbleShots li {
