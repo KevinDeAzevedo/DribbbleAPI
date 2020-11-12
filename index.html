@@ -1,11 +1,11 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
 	<script src="jquery-3.5.1.js"></script>
-	<title>Title</title>
+	<title>My Shots</title>
 </head>
 <body>
 	<div class="container">
@@ -39,27 +39,5 @@
 					}
 				}
 		});</script>
-	
-	<!--<script>// Set the Access Token
-	var accessToken = "87e0201432d4e5d0267c586a71cefd6df20957cb384bc30e0a936220580d6886"
-	
-	// Call Dribble v2 API
-	$.ajax({
-			url: 'https://api.dribbble.com/v2/user/shots?access_token='+accessToken,
-			dataType: 'json',
-			type: 'GET',
-			success: function(data) {  
-				if (data.length > 0) { 
-					$.each(data.reverse(), function(i, val) {               
-						$('#dribbbleShots').prepend(
-							'<li><a target="_blank" href="'+ val.html_url +'" class="shot" title="' + val.title + '"><div class="title">' + val.title + '</div><img src="'+ val.images.two_x +'"/></a></li>'
-							)
-					})
-				}
-				else {
-					$('#dribbbleShots').append('<p>Sorry, No shots yet</p>');
-				}
-			}
-	});</script>-->
 </body>
 </html>
