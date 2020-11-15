@@ -24,7 +24,7 @@
 						$.each(data.reverse(), function(i, val) {	
 							if (val.video !== null) {
 									$('#dribbbleShots').prepend(
-										'<li><a target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><video loop autoplay playsinline src="'+ val.video.large_preview_url +'" type="video/mp4"></a></li>'
+										'<li><a target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><video loop autoplay playsinline><source src="'+ val.video.large_preview_url +'" type="video/mp4"></video></a></li>'
 								)
 							}
 							else {
